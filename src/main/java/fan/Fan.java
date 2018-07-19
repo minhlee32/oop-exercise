@@ -52,8 +52,8 @@ public class Fan {
 
     public String toString() {
         if (isOn()) {
-            return "Current speed " + getSpeed() + " of " + color + " fan " + getRadius() + " is on";
-        } else return "Current speed " + getSpeed() + " of " + color + " fan " + getRadius() + " is off";
+            return color + " fan has speed level " + getSpeed() + " and radius is " + getRadius() + ", fan is on";
+        } else return color + " fan has speed level " + getSpeed() + " and radius is " + getRadius() +  ", fan is off";
     }
 
 
