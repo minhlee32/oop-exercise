@@ -38,7 +38,7 @@ public class Account {
         this.dateCreated = dateCreated;
     }
 
-    public void setAnnualInterestRate(double annualInterestRate) {
+    void setAnnualInterestRate(double annualInterestRate) {
 
         this.annualInterestRate = annualInterestRate;
     }
@@ -53,14 +53,16 @@ public class Account {
         this.id = id;
     }
 
-    public double getMontlyInterestRate() {
-        double monthlyInterestRate = (annualInterestRate / 12) / 100;
-        return monthlyInterestRate;
+    private double getMontlyInterestRate() {
+        return (annualInterestRate / 12) / 100;
     }
 
     public double getMontlyInterest() {
-        double withdraw = balance * getAnnualInterestRate();
-        return withdraw;
+        return balance * getMontlyInterestRate();
+    }
+
+    void withdraw(double money) {
+        balance -= money;
     }
 
     public double deposit(double money) {
