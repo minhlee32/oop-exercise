@@ -6,6 +6,9 @@ public class QuadraticEquation {
     private double c;
 
     public QuadraticEquation(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
 
     }
 
@@ -28,18 +31,21 @@ public class QuadraticEquation {
     }
 
     public double getRoot1() {
-        if (getDiscriminant() > 0) {
-            double r1 = (-b + Math.pow(getDiscriminant(), 0.5));
-            return r1;
-        } else return 0;
+        double r1;
+        if (getDiscriminant() == 0) {
+            r1 = Math.pow(a, 0.05);
+        }else r1 = (-b + Math.pow(getDiscriminant(), 0.5));
+        return r1;
     }
 
     public double getRoot2() {
-        if (getDiscriminant() > 0) {
-            double r2 = (-b - Math.pow(getDiscriminant(), 0.5));
-            return r2;
-        } else return 0;
+        double r2;
+        if (getDiscriminant() == 0) {
+            r2 = Math.pow(a, 0.05);
+        }else r2 = (-b + Math.pow(getDiscriminant(), 0.5));
+        return r2;
     }
+
 
 
 }
