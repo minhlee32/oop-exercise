@@ -27,22 +27,22 @@ public class QuadraticEquation {
     }
 
     public double getDiscriminant() {
-        return b * 2 - 4 * a * c;
+        return b * b - 4 * a * c;
     }
 
     public double getRoot1() {
         double r1;
         if (getDiscriminant() == 0) {
-            r1 = Math.pow(a, 0.05);
-        }else r1 = (-b + Math.pow(getDiscriminant(), 0.5));
+            r1 = Math.pow(a, 0.5);
+        }else r1 = (-b + Math.pow(getDiscriminant(), 0.5))/(2*a);
         return r1;
     }
 
     public double getRoot2() {
         double r2;
         if (getDiscriminant() == 0) {
-            r2 = Math.pow(a, 0.05);
-        }else r2 = (-b + Math.pow(getDiscriminant(), 0.5));
+            r2 = Math.pow(a, 0.5);
+        }else r2 = (-b - Math.pow(getDiscriminant(), 0.5))/(2*a);
         return r2;
     }
 

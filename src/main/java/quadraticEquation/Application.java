@@ -2,7 +2,7 @@ package quadraticEquation;
 
 public class Application {
     public static void main(String[] args) {
-        QuadraticEquation quadraticEquation = new QuadraticEquation(25, 0, 0);
+        QuadraticEquation quadraticEquation = new QuadraticEquation(1, -4, 3);
         double delta = quadraticEquation.getDiscriminant();
 
         System.out.println("The first coefficient is: " + quadraticEquation.getA());
@@ -18,7 +18,7 @@ public class Application {
         } else {
             System.out.println("Equation has 2 roots");
             System.out.printf("The first root: %.2f",quadraticEquation.getRoot1());
-            System.out.printf("The second root: %.2f",quadraticEquation.getRoot2());
+            System.out.printf("\nThe second root: %.2f",quadraticEquation.getRoot2());
         }
 
 
